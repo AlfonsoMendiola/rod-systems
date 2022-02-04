@@ -1,11 +1,13 @@
-import express from 'express';
+//import express from 'express';
+const express = require('express');
 const router =  express.Router();
 
 //importar el modelo de los usuarios
-import User from '../models/user';
+//import User from '../models/user';
+const User = require('../models/user');
 
 //importar los middelwares personalizados para la autenticacion de usuarios y uso del token
-const {verificarAuth, verificarAdministrador} = require('../middlewares/autenticacion')
+const {verificarAuth, verificarAdministrador} = require('../middlewares/autenticacion');
 
 //importar el bcrypt para encriptar contraseñas
 const bcrypt = require('bcrypt');

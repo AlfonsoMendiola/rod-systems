@@ -1,9 +1,11 @@
-import express from "express";
+//import express from "express";
+const express = require('express');
 const router = express.Router();
 
 
 //importar el modelo de los prospectos
-import Prospecto from '../models/prospecto';
+//import Prospecto from '../models/prospecto';
+const Prospecto = require('../models/prospecto');
 //importar los middleware personalizados para mayor seguridad en las rutas
 const {verificarAuth, verificarAdministrador} = require('../middlewares/autenticacion');
 

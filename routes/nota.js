@@ -1,8 +1,10 @@
-import express from 'express';
+//import express from 'express';
+const express = require('express');
 const router =  express.Router();
 
 //importar el modelo de las notas
-import Nota from '../models/nota.js';
+//import Nota from '../models/nota.js';
+const Nota = require('../models/nota.js');
 
 //middlewares personalizados
 const {verificarAuth, verificarAdministrador} = require('../middlewares/autenticacion');

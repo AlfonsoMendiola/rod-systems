@@ -1,4 +1,5 @@
-import mongoose from 'mongoose';
+//import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 //libreria para validar que un campo debe ser unico, la propiedad unique ya puede ser usada
 const uniqueValidator = require('mongoose-unique-validator');
@@ -16,4 +17,4 @@ prospectoSchema.plugin(uniqueValidator, {message: 'Error, esperaba {PATH} unico 
 
 //convertir a modelo de mongoose y exportar
 const Prospecto = mongoose.model('Prospecto', prospectoSchema);
-export default Prospecto;
+module.exports = Prospecto;

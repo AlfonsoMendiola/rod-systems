@@ -1,16 +1,20 @@
-import express from 'express';
-import morgan from 'morgan';
-import cors from 'cors';
-import path from 'path';
+// import express from 'express';
+// import morgan from 'morgan';
+// import cors from 'cors';
+// import path from 'path';
+const express = require('express');
+const morgan = require('morgan');
+const cors = require('cors');
+const path = require('path');
 
 const app = express();
 
 //conexion a db
 const mongoose = require('mongoose');
 //conexion local
-//const uri = 'mongodb://localhost:27017/rodsystems';
+const uri = 'mongodb://localhost:27017/rodsystems';
 //conexion en la nube con mongo atlas
-const uri = 'mongodb+srv://user_udemy:gAzxg81oroZqB77q@udemy.n8ana.mongodb.net/dbpruebas?retryWrites=true&w=majority'
+//const uri = 'mongodb+srv://user_udemy:gAzxg81oroZqB77q@udemy.n8ana.mongodb.net/dbpruebas?retryWrites=true&w=majority'
 
 const options = {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}
 mongoose.connect(uri, options).then(

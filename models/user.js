@@ -1,4 +1,5 @@
-import mongoose from 'mongoose';
+//import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 //libreria para validar que un campo debe ser unico, la propiedad unique ya puede ser usada
 const uniqueValidator = require('mongoose-unique-validator');
@@ -33,4 +34,4 @@ userSchema.methods.toJSON = function (){
 
 //convertir a modelo de mongoose y exportar
 const User = mongoose.model('User', userSchema);
-export default User;
+module.exports = User;

@@ -1,11 +1,13 @@
-import express from "express";
+//import express from "express";
+const express = require('express');
 const router = express.Router();
 
 //JSON web token para firmas electricicas de usuarios
 const jwt = require('jsonwebtoken')
 
 //importar el modelo de los usuarios
-import User from '../models/user';
+//import User from '../models/user';
+const User = require('../models/user');
 
 //importar el bcrypt para encriptar contraseñas
 const bcrypt = require('bcrypt');
@@ -44,13 +46,6 @@ router.post('/', async(req, res) => {
         })
     }
 })
-
-
-
-
-
-
-
 
 
 module.exports = router;
