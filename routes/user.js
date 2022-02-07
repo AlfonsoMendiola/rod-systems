@@ -25,6 +25,7 @@ router.post('/nuevo-usuario', async(req, res) => {
         nombre: req.body.nombre,
         email: req.body.email,
         role: req.body.role,
+        vista: req.body.vista,
     }
     //encriptar la pass con un coste computacional de saltRounds = 10
     body.pass = bcrypt.hashSync(req.body.pass, saltRounds);
